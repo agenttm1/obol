@@ -1,0 +1,250 @@
+<resources>
+    <string name="app_name">Obol</string>
+
+    <!-- Donja navigacija -->
+    <string name="nav_overview">Pregled</string>
+    <string name="nav_calendar">Kalendar</string>
+    <string name="nav_settings">Postavke</string>
+
+    <!-- Zajedničko -->
+    <string name="action_add_subscription">Dodaj pretplatu</string>
+    <string name="relative_today">danas</string>
+    <string name="relative_tomorrow">sutra</string>
+    <plurals name="relative_in_days">
+        <item quantity="one">za %d dan</item>
+        <item quantity="few">za %d dana</item>
+        <item quantity="other">za %d dana</item>
+    </plurals>
+    <string name="cycle_suffix_monthly">/ mj</string>
+    <string name="cycle_suffix_weekly">/ tj.</string>
+    <string name="cycle_suffix_quarterly">/ 3 mj.</string>
+    <string name="cycle_suffix_semiannual">/ 6 mj.</string>
+    <string name="cycle_suffix_yearly">/ god.</string>
+    <string name="cycle_suffix_custom_days">/ %d d.</string>
+
+    <!-- Pregled -->
+    <string name="overview_monthly_total">Mjesečno ukupno</string>
+    <string name="overview_yearly_and_count">%1$s godišnje · %2$s</string>
+    <plurals name="overview_active_subscriptions">
+        <item quantity="one">%d aktivna pretplata</item>
+        <item quantity="few">%d aktivne pretplate</item>
+        <item quantity="other">%d aktivnih pretplata</item>
+    </plurals>
+    <string name="overview_upcoming">Sljedeće naplate</string>
+    <string name="overview_all_subscriptions">Sve pretplate</string>
+    <string name="overview_billing_subtitle">%1$s · %2$s</string>
+    <string name="overview_trial_title">%1$s · probni period</string>
+    <string name="overview_trial_subtitle">završava %1$s · %2$s</string>
+    <string name="overview_first_charge">prva naplata</string>
+    <string name="overview_trial_badge">probni period</string>
+    <string name="overview_empty_title">Još nemaš nijednu pretplatu</string>
+    <string name="overview_empty_body">Dodaj prvu i Obol će ti javiti prije svake naplate i kraja probnog perioda. Sve ostaje samo na tvom uređaju — bez računa, bez prijave, bez interneta.</string>
+
+    <string name="action_back">Natrag</string>
+    <string name="action_ok">U redu</string>
+    <string name="action_cancel">Odustani</string>
+
+    <!-- Ciklusi -->
+    <string name="cycle_weekly">Tjedno</string>
+    <string name="cycle_monthly">Mjesečno</string>
+    <string name="cycle_quarterly">Tromjesečno</string>
+    <string name="cycle_semiannual">Polugodišnje</string>
+    <string name="cycle_yearly">Godišnje</string>
+    <string name="cycle_custom_days">Svakih nekoliko dana</string>
+    <plurals name="cycle_every_n_days">
+        <item quantity="one">Svaki %d dan</item>
+        <item quantity="few">Svaka %d dana</item>
+        <item quantity="other">Svakih %d dana</item>
+    </plurals>
+
+    <!-- Kategorije -->
+    <string name="category_entertainment">Zabava i video</string>
+    <string name="category_music">Glazba</string>
+    <string name="category_gaming">Igre</string>
+    <string name="category_storage">Pohrana</string>
+    <string name="category_tools">Alati</string>
+    <string name="category_education">Učenje</string>
+    <string name="category_fitness">Fitness</string>
+    <string name="category_news">Vijesti</string>
+    <string name="category_other">Ostalo</string>
+
+    <!-- Dodaj pretplatu -->
+    <string name="add_title">Dodaj pretplatu</string>
+    <string name="add_search_label">Pretraži servis</string>
+    <string name="add_search_placeholder">Netflix, Spotify, HBO…</string>
+    <plurals name="add_catalog_hint">
+        <item quantity="one">%d servis s cijenama za Hrvatsku — tapni i gotovo.</item>
+        <item quantity="few">%d servisa s cijenama za Hrvatsku — tapni i gotovo.</item>
+        <item quantity="other">%d servisa s cijenama za Hrvatsku — tapni i gotovo.</item>
+    </plurals>
+    <string name="add_section_popular">Popularno</string>
+    <string name="add_section_other">Ostali servisi</string>
+    <string name="add_section_results">Rezultati</string>
+    <string name="add_no_results">Nema servisa „%1$s". Dodaj ga ručno.</string>
+    <string name="add_price_from">od %1$s</string>
+    <string name="add_manual">Nema je na listi? Dodaj ručno</string>
+
+    <!-- Postavi plan -->
+    <string name="plan_title">Postavi plan</string>
+    <string name="plan_change">Promijeni</string>
+    <string name="plan_choose_plan">Odaberi plan</string>
+    <string name="plan_name_placeholder">Naziv pretplate</string>
+    <string name="plan_category">Kategorija</string>
+    <string name="plan_price">Cijena</string>
+    <string name="plan_cycle">Ciklus</string>
+    <string name="plan_cycle_days">Broj dana u ciklusu</string>
+    <string name="plan_trial_title">Sada sam u probnom periodu</string>
+    <string name="plan_trial_subtitle">Javit ćemo ti prije prve naplate</string>
+    <string name="plan_trial_until">Probni period traje do</string>
+    <string name="plan_trial_then">Nakon toga plaćam</string>
+    <string name="plan_promo_title">Imam promo cijenu</string>
+    <string name="plan_promo_subtitle">Prvih nekoliko ciklusa po nižoj cijeni</string>
+    <string name="plan_promo_price">Promo cijena</string>
+    <string name="plan_promo_duration">Trajanje promocije</string>
+    <string name="plan_promo_shorter">Kraće</string>
+    <string name="plan_promo_longer">Duže</string>
+    <string name="plan_full_price_from">Puna cijena od %1$s</string>
+    <string name="plan_billing_day">Dan naplate</string>
+    <string name="plan_billing_day_monthly">%1$d. u mjesecu</string>
+    <string name="plan_billing_day_after_trial">Prva naplata dan nakon probnog perioda: %1$s</string>
+    <string name="plan_amount_per_cycle">%1$s %2$s</string>
+    <string name="plan_save">Dodaj u Obol</string>
+    <string name="plan_footer">Dok traje probni period ili promocija, u ukupan mjesečni trošak ulazi niža cijena.</string>
+    <string name="plan_error_name">Upiši naziv pretplate</string>
+    <string name="plan_error_price">Upiši cijenu, npr. 9,99</string>
+    <string name="plan_error_cycle_days">Upiši broj dana, od 1 do 1095</string>
+    <string name="plan_error_trial_ended">Probni period je već završio</string>
+    <string name="plan_error_promo_price">Upiši promo cijenu</string>
+    <string name="plan_error_promo_not_lower">Promo cijena mora biti niža od pune</string>
+    <plurals name="promo_cycles_weekly">
+        <item quantity="one">%d tjedan</item>
+        <item quantity="few">%d tjedna</item>
+        <item quantity="other">%d tjedana</item>
+    </plurals>
+    <plurals name="promo_cycles_monthly">
+        <item quantity="one">%d mjesec</item>
+        <item quantity="few">%d mjeseca</item>
+        <item quantity="other">%d mjeseci</item>
+    </plurals>
+    <plurals name="promo_cycles_quarterly">
+        <item quantity="one">%d tromjesečje</item>
+        <item quantity="few">%d tromjesečja</item>
+        <item quantity="other">%d tromjesečja</item>
+    </plurals>
+    <plurals name="promo_cycles_semiannual">
+        <item quantity="one">%d polugodište</item>
+        <item quantity="few">%d polugodišta</item>
+        <item quantity="other">%d polugodišta</item>
+    </plurals>
+    <plurals name="promo_cycles_yearly">
+        <item quantity="one">%d godina</item>
+        <item quantity="few">%d godine</item>
+        <item quantity="other">%d godina</item>
+    </plurals>
+    <plurals name="promo_cycles_custom">
+        <item quantity="one">%d ciklus</item>
+        <item quantity="few">%d ciklusa</item>
+        <item quantity="other">%d ciklusa</item>
+    </plurals>
+
+    <string name="plan_title_edit">Uredi pretplatu</string>
+    <string name="plan_save_edit">Spremi promjene</string>
+    <string name="plan_price_change_from">Nova cijena vrijedi od</string>
+    <string name="plan_price_change_caption">Do tog datuma ostaje dosadašnja cijena</string>
+
+    <!-- Detalji -->
+    <string name="details_price">Cijena</string>
+    <string name="details_yearly">Godišnje</string>
+    <string name="details_next_charge">Sljedeća naplata %1$s</string>
+    <string name="details_trial_then">Probni period do %1$s, zatim %2$s</string>
+    <string name="details_promo_then">Promo cijena do %1$s, zatim %2$s</string>
+    <string name="details_usage_question">Jesi li koristio %1$s u %2$s?</string>
+    <string name="details_usage_body">Pitamo jednom mjesečno. Tako znamo što zapravo koristiš, bez ikakvih dozvola.</string>
+    <string name="details_usage_yes">Da, koristio sam</string>
+    <string name="details_usage_no">Nisam</string>
+    <string name="details_history">Povijest naplate</string>
+    <string name="details_edit">Uredi</string>
+    <string name="details_delete">Obriši</string>
+    <string name="details_delete_title">Obrisati %1$s?</string>
+    <string name="details_delete_body">Pretplata će se trajno ukloniti, zajedno s poviješću cijena i odgovorima o korištenju.</string>
+    <!-- Mjeseci u lokativu, za „u rujnu". Redom od siječnja. -->
+    <string-array name="months_locative">
+        <item>siječnju</item>
+        <item>veljači</item>
+        <item>ožujku</item>
+        <item>travnju</item>
+        <item>svibnju</item>
+        <item>lipnju</item>
+        <item>srpnju</item>
+        <item>kolovozu</item>
+        <item>rujnu</item>
+        <item>listopadu</item>
+        <item>studenom</item>
+        <item>prosincu</item>
+    </string-array>
+
+
+    <!-- Kalendar -->
+    <string name="calendar_previous_month">Prethodni mjesec</string>
+    <string name="calendar_next_month">Sljedeći mjesec</string>
+    <string name="calendar_month_total">Ukupno ovaj mjesec</string>
+    <string name="calendar_billing_days">Naplata</string>
+    <plurals name="calendar_days">
+        <item quantity="one">%d dan</item>
+        <item quantity="few">%d dana</item>
+        <item quantity="other">%d dana</item>
+    </plurals>
+    <string name="calendar_billings_in">Naplate u %1$s</string>
+    <string name="calendar_no_billings">Ovaj mjesec nema naplata.</string>
+    <string name="calendar_empty">Kad dodaš pretplate, ovdje ćeš vidjeti svaku naplatu po danima.</string>
+    <string name="calendar_day_number">%1$02d.</string>
+    <!-- Kratki nazivi dana, od ponedjeljka. -->
+    <string-array name="weekdays_short">
+        <item>Pon</item>
+        <item>Uto</item>
+        <item>Sri</item>
+        <item>Čet</item>
+        <item>Pet</item>
+        <item>Sub</item>
+        <item>Ned</item>
+    </string-array>
+
+
+    <!-- Obavijesti -->
+    <string name="channel_billing">Naplate</string>
+    <string name="channel_billing_description">Podsjetnici prije svake naplate</string>
+    <string name="channel_trials">Probni periodi i promocije</string>
+    <string name="channel_trials_description">Kraj probnog perioda i promotivne cijene</string>
+    <string name="channel_checks">Provjere korištenja</string>
+    <string name="channel_checks_description">Jednom mjesečno: koristiš li pretplatu</string>
+    <string name="notification_billing_title">Nadolazeća naplata</string>
+    <string name="notification_billing_text">%1$s ti se naplaćuje %2$s — %3$s</string>
+    <string name="notification_trial_title">Kraj probnog perioda</string>
+    <string name="notification_trial_text">%1$s ti %2$s prestaje probni period. Prva naplata je %3$s.</string>
+    <string name="notification_promo_title">Kraj promocije</string>
+    <string name="notification_promo_text">%1$s ti od %2$s ide s %3$s na %4$s.</string>
+    <string name="notification_usage_title">Mjesečna provjera</string>
+    <string name="notification_usage_text">Jesi li prošli mjesec koristio %1$s?</string>
+
+
+    <!-- Postavke -->
+    <string name="settings_title">Postavke</string>
+    <string name="settings_group_reminders">Podsjetnici</string>
+    <string name="settings_group_general">Općenito</string>
+    <string name="settings_billing_days">Javi mi prije naplate</string>
+    <string name="settings_billing_days_off">Isključeno</string>
+    <string name="settings_reminder_time">Vrijeme podsjetnika</string>
+    <string name="settings_usage_checks">Mjesečna provjera korištenja</string>
+    <string name="settings_usage_checks_subtitle">Pitaj koristim li svaki servis</string>
+    <string name="settings_price_alerts">Upozori na poskupljenje</string>
+    <string name="settings_price_alerts_subtitle">Kad promotivna cijena završava</string>
+    <string name="settings_notifications_off">Obavijesti su isključene</string>
+    <string name="settings_notifications_off_subtitle">Bez njih podsjetnici ne mogu stići</string>
+    <string name="settings_notifications_enable">Uključi</string>
+    <string name="settings_currency">Valuta</string>
+    <string name="settings_currency_value">EUR (€)</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_value">Mračna</string>
+    <string name="settings_footer">TM Studio · verzija %1$s</string>
+    <string name="settings_privacy">Svi podaci ostaju samo na ovom uređaju.</string>
+</resources>

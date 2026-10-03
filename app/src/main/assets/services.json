@@ -1,0 +1,214 @@
+{
+  "version": 2,
+  "updatedOn": "2026-10-03",
+  "services": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "ENTERTAINMENT",
+      "monogram": "N",
+      "colorHex": "#FF8168",
+      "plans": [
+        { "name": "Standard s reklamama", "priceCents": 599 },
+        { "name": "Standard", "priceCents": 1099 },
+        { "name": "Premium", "priceCents": 1399, "note": "4K + HDR" }
+      ]
+    },
+    {
+      "id": "hbo-max",
+      "name": "HBO Max",
+      "category": "ENTERTAINMENT",
+      "monogram": "H",
+      "colorHex": "#A99CF5",
+      "plans": [
+        { "name": "Osnovni s reklamama", "priceCents": 599 },
+        { "name": "Standard", "priceCents": 999 },
+        { "name": "Premium", "priceCents": 1399, "note": "4K" }
+      ]
+    },
+    {
+      "id": "disney-plus",
+      "name": "Disney+",
+      "category": "ENTERTAINMENT",
+      "monogram": "D",
+      "colorHex": "#A99CF5",
+      "plans": [
+        { "name": "Standard s reklamama", "priceCents": 599 },
+        { "name": "Standard", "priceCents": 999 },
+        { "name": "Premium", "priceCents": 1399, "note": "4K + HDR" }
+      ]
+    },
+    {
+      "id": "youtube-premium",
+      "name": "YouTube Premium",
+      "category": "ENTERTAINMENT",
+      "monogram": "Y",
+      "colorHex": "#A99CF5",
+      "plans": [
+        { "name": "Pojedinačni", "priceCents": 999 },
+        { "name": "Obiteljski", "priceCents": 1899, "note": "do 6 članova" },
+        { "name": "Studentski", "priceCents": 599 }
+      ]
+    },
+    {
+      "id": "apple-tv-plus",
+      "name": "Apple TV+",
+      "category": "ENTERTAINMENT",
+      "monogram": "A",
+      "colorHex": "#A99CF5",
+      "plans": [
+        { "name": "Mjesečno", "priceCents": 999 }
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "MUSIC",
+      "monogram": "S",
+      "colorHex": "#2FD39B",
+      "plans": [
+        { "name": "Individual", "priceCents": 699 },
+        { "name": "Student", "priceCents": 399 },
+        { "name": "Duo", "priceCents": 999, "note": "2 računa" },
+        { "name": "Family", "priceCents": 1249, "note": "do 6 računa" }
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "category": "MUSIC",
+      "monogram": "A",
+      "colorHex": "#2FD39B",
+      "plans": [
+        { "name": "Individualni", "priceCents": 699 }
+      ]
+    },
+    {
+      "id": "playstation-plus",
+      "name": "PlayStation Plus",
+      "category": "GAMING",
+      "monogram": "P",
+      "colorHex": "#7FB0FF",
+      "plans": [
+        { "name": "Essential", "priceCents": 899 },
+        { "name": "Extra", "priceCents": 1399 },
+        { "name": "Premium", "priceCents": 1699 },
+        { "name": "Essential", "priceCents": 7199, "cycle": "YEARLY", "note": "12 mjeseci" },
+        { "name": "Extra", "priceCents": 12599, "cycle": "YEARLY", "note": "12 mjeseci" },
+        { "name": "Premium", "priceCents": 15199, "cycle": "YEARLY", "note": "12 mjeseci" }
+      ]
+    },
+    {
+      "id": "xbox-game-pass",
+      "name": "Xbox Game Pass",
+      "category": "GAMING",
+      "monogram": "X",
+      "colorHex": "#7FB0FF",
+      "plans": [
+        { "name": "Core", "priceCents": 699 },
+        { "name": "Ultimate", "priceCents": 1799 },
+        { "name": "PC Game Pass", "priceCents": 1199 }
+      ]
+    },
+    {
+      "id": "nintendo-switch-online",
+      "name": "Nintendo Switch Online",
+      "category": "GAMING",
+      "monogram": "N",
+      "colorHex": "#7FB0FF",
+      "plans": [
+        { "name": "Pojedinačni", "priceCents": 399, "note": "1 mjesec" },
+        { "name": "Pojedinačni", "priceCents": 799, "cycle": "QUARTERLY", "note": "3 mjeseca" },
+        { "name": "Pojedinačni", "priceCents": 1999, "cycle": "YEARLY", "note": "12 mjeseci" },
+        { "name": "Obiteljski", "priceCents": 3499, "cycle": "YEARLY", "note": "12 mjeseci, do 8 računa" },
+        { "name": "Expansion Pack", "priceCents": 3999, "cycle": "YEARLY", "note": "12 mjeseci" }
+      ]
+    },
+    {
+      "id": "icloud-plus",
+      "name": "iCloud+",
+      "category": "STORAGE",
+      "monogram": "i",
+      "colorHex": "#E8C766",
+      "plans": [
+        { "name": "50 GB", "priceCents": 99 },
+        { "name": "200 GB", "priceCents": 299 },
+        { "name": "2 TB", "priceCents": 999 },
+        { "name": "6 TB", "priceCents": 2999 },
+        { "name": "12 TB", "priceCents": 5999 }
+      ]
+    },
+    {
+      "id": "google-one",
+      "name": "Google One",
+      "category": "STORAGE",
+      "monogram": "G",
+      "colorHex": "#E8C766",
+      "plans": [
+        { "name": "Basic 100 GB", "priceCents": 199 },
+        { "name": "Premium 2 TB", "priceCents": 999 },
+        { "name": "Basic 100 GB", "priceCents": 1999, "cycle": "YEARLY" },
+        { "name": "Premium 2 TB", "priceCents": 9999, "cycle": "YEARLY" }
+      ]
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "category": "TOOLS",
+      "monogram": "M",
+      "colorHex": "#8FB8FF",
+      "plans": [
+        { "name": "Basic", "priceCents": 200, "note": "100 GB" },
+        { "name": "Personal", "priceCents": 1000 },
+        { "name": "Family", "priceCents": 1300, "note": "do 6 osoba" },
+        { "name": "Basic", "priceCents": 2000, "cycle": "YEARLY", "note": "100 GB" },
+        { "name": "Personal", "priceCents": 9900, "cycle": "YEARLY" },
+        { "name": "Family", "priceCents": 12900, "cycle": "YEARLY", "note": "do 6 osoba" }
+      ]
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "category": "TOOLS",
+      "monogram": "C",
+      "colorHex": "#8FB8FF",
+      "plans": [
+        { "name": "Pro", "priceCents": 1199 },
+        { "name": "Pro", "priceCents": 10999, "cycle": "YEARLY" }
+      ]
+    },
+    {
+      "id": "adobe-creative-cloud",
+      "name": "Adobe Creative Cloud",
+      "category": "TOOLS",
+      "monogram": "A",
+      "colorHex": "#8FB8FF",
+      "plans": [
+        { "name": "Photography 20 GB", "priceCents": 1199, "note": "godišnja obveza, mjesečno plaćanje" },
+        { "name": "Acrobat Pro", "priceCents": 1999, "note": "godišnja obveza, mjesečno plaćanje" },
+        { "name": "Creative Cloud Pro", "priceCents": 6999, "note": "godišnja obveza, mjesečno plaćanje" }
+      ]
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "category": "EDUCATION",
+      "monogram": "D",
+      "colorHex": "#8FB8FF",
+      "plans": [
+        { "name": "Super", "priceCents": 11099, "cycle": "YEARLY" }
+      ]
+    },
+    {
+      "id": "strava",
+      "name": "Strava",
+      "category": "FITNESS",
+      "monogram": "S",
+      "colorHex": "#8FB8FF",
+      "plans": [
+        { "name": "Pretplata", "priceCents": 1099 },
+        { "name": "Pretplata", "priceCents": 7499, "cycle": "YEARLY" }
+      ]
+    }
+  ]
+}

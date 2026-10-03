@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+. Aplikacija obećava da podaci ostaju na uređaju (spec, poglavlje 9),
+  pa se ništa ne šalje u sigurnosnu kopiju u oblaku. Izravni prijenos sa starog
+  na novi telefon ostaje, da korisnik ne izgubi pretplate pri promjeni uređaja.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="database" path="." />
+        <include domain="file" path="datastore/" />
+    </device-transfer>
+</data-extraction-rules>

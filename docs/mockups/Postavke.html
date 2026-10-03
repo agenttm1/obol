@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<title>Postavke</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2FD39B; } a:hover { color: #6FE2BD; }
+    .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .sw { width: 46px; height: 28px; border-radius: 14px; background: #2A323D; position: relative; display: inline-block; flex-shrink: 0; transition: background .18s ease; }
+    .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 11px; background: #F3F5F7; transition: transform .18s ease; }
+    input:checked + .sw { background: #2FD39B; }
+    input:checked + .sw::after { transform: translateX(18px); }
+    input:focus-visible + .sw { outline: 2px solid #8FB8FF; outline-offset: 2px; }
+  </style>
+
+</head>
+<body>
+
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #0C1014; color: #F3F5F7; font-family: 'Manrope', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 26px 20px 0">
+    <h1 style="margin: 0; font-size: 23px; font-weight: 800; letter-spacing: -0.02em">Postavke</h1>
+  </header>
+
+  <section style="margin: 18px 20px 0; padding: 17px 16px; border-radius: 20px; background: #11241C; border: 1px solid #1F4436">
+    <div style="display: flex; align-items: center; gap: 8px">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2FD39B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.4 5.6 6.1.5-4.6 4 1.4 6-5.3-3.2L6.7 19l1.4-6-4.6-4 6.1-.5z"></path></svg>
+      <span style="font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; font-weight: 800; color: #2FD39B">Obol Pro</span>
+    </div>
+    <p style="margin: 9px 0 0; font-size: 13px; color: #C9E3D8; font-weight: 500; line-height: 1.5">Bez reklama na pokretanju, neograničen broj pretplata, izvoz podataka i pametne preporuke.</p>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 14px">
+      <button type="button" style="flex-grow: 1; min-height: 46px; border-radius: 14px; border: 0; background: #2FD39B; color: #06170F; font-family: inherit; font-size: 14px; font-weight: 800; cursor: pointer">Otključaj za 3,99 €</button>
+      <span style="font-size: 11.5px; color: #93C6B2; font-weight: 700; text-align: right; line-height: 1.3">jednokratno,<br>bez pretplate</span>
+    </div>
+  </section>
+
+  <section style="padding: 20px 20px 0">
+    <h2 style="margin: 0 0 8px; font-size: 12px; font-weight: 800; color: #97A3B2; letter-spacing: 0.06em; text-transform: uppercase">Podsjetnici</h2>
+    <div style="border-radius: 18px; background: #161C23; border: 1px solid #1E252E; overflow: hidden">
+      <button type="button" style="width: 100%; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: transparent; border: 0; border-bottom: 1px solid #1E252E; color: #F3F5F7; font-family: inherit; cursor: pointer; text-align: left">
+        <span style="flex-grow: 1; font-size: 14px; font-weight: 600">Javi mi prije naplate</span>
+        <span style="font-size: 13px; color: #97A3B2; font-weight: 700">3 dana</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E6B7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+      </button>
+      <label style="min-height: 56px; display: flex; align-items: center; gap: 12px; padding: 8px 16px; border-bottom: 1px solid #1E252E; cursor: pointer">
+        <span style="flex-grow: 1">
+          <span style="display: block; font-size: 14px; font-weight: 600">Mjesečna provjera korištenja</span>
+          <span style="display: block; font-size: 11.5px; color: #97A3B2; font-weight: 500; margin-top: 2px">Pitaj koristim li svaki servis</span>
+        </span>
+        <input type="checkbox" class="vh" checked>
+        <span class="sw" aria-hidden="true"></span>
+      </label>
+      <label style="min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 8px 16px; cursor: pointer">
+        <span style="flex-grow: 1; font-size: 14px; font-weight: 600">Upozori na poskupljenje</span>
+        <input type="checkbox" class="vh" checked>
+        <span class="sw" aria-hidden="true"></span>
+      </label>
+    </div>
+  </section>
+
+  <section style="padding: 18px 20px 0">
+    <h2 style="margin: 0 0 8px; font-size: 12px; font-weight: 800; color: #97A3B2; letter-spacing: 0.06em; text-transform: uppercase">Općenito</h2>
+    <div style="border-radius: 18px; background: #161C23; border: 1px solid #1E252E; overflow: hidden">
+      <button type="button" style="width: 100%; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: transparent; border: 0; border-bottom: 1px solid #1E252E; color: #F3F5F7; font-family: inherit; cursor: pointer; text-align: left">
+        <span style="flex-grow: 1; font-size: 14px; font-weight: 600">Valuta</span>
+        <span style="font-size: 13px; color: #97A3B2; font-weight: 700">EUR (€)</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E6B7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+      </button>
+      <button type="button" style="width: 100%; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: transparent; border: 0; border-bottom: 1px solid #1E252E; color: #F3F5F7; font-family: inherit; cursor: pointer; text-align: left">
+        <span style="flex-grow: 1; font-size: 14px; font-weight: 600">Tema</span>
+        <span style="font-size: 13px; color: #97A3B2; font-weight: 700">Mračna</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E6B7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+      </button>
+      <button type="button" style="width: 100%; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: transparent; border: 0; color: #F3F5F7; font-family: inherit; cursor: pointer; text-align: left">
+        <span style="flex-grow: 1; font-size: 14px; font-weight: 600">Izvoz u CSV</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E6B7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+      </button>
+    </div>
+  </section>
+
+  <p style="margin: 18px 20px 0; font-size: 11.5px; color: #6E7B8A; font-weight: 600; text-align: center">TM Studio · verzija 1.0.0</p>
+
+  <nav aria-label="Glavna navigacija" style="margin-top: auto; display: flex; border-top: 1px solid #1A212A; background: #0F141A; padding: 7px 8px 15px">
+    <a href="Main.dc.html" style="flex-grow: 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #97A3B2; font-size: 10.5px; font-weight: 700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"></path></svg>
+      Pregled
+    </a>
+    <a href="Kalendar.dc.html" style="flex-grow: 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #97A3B2; font-size: 10.5px; font-weight: 700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M8 3v4M16 3v4M3 11h18"></path></svg>
+      Kalendar
+    </a>
+    <a href="Statistika.dc.html" style="flex-grow: 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #97A3B2; font-size: 10.5px; font-weight: 700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M6 21v-6M11 21V8M16 21v-9M21 21V5"></path></svg>
+      Statistika
+    </a>
+    <a href="Postavke.dc.html" aria-current="page" style="flex-grow: 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #2FD39B; font-size: 10.5px; font-weight: 700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 17h16"></path><circle cx="10" cy="7" r="2.4"></circle><circle cx="15" cy="17" r="2.4"></circle></svg>
+      Postavke
+    </a>
+  </nav>
+
+</div>
+
+</body>
+</html>

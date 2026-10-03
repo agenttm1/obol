@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Prsten loga: kovanica i slovo O s prekidom gore desno.
+  Izvor: docs/mockups/IkonaB.html — krug r=150, stroke 58, dasharray 811/131,
+  rotacija −20°. Vektor ne podržava dasharray, pa je luk od 309,78° zapisan izravno.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path
+        android:pathData="M396.95,204.70 A150,150 0 1,1 306.76,114.85"
+        android:strokeWidth="58"
+        android:strokeColor="@color/obol_icon_ring"
+        android:strokeLineCap="round" />
+</vector>

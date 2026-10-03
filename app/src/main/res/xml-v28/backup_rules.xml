@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 9–11: isto kao data_extraction_rules — samo izravni prijenos na novi
+  uređaj, bez kopije u oblaku (requireFlags postoji od API 28).
+-->
+<full-backup-content>
+    <include domain="database" path="." requireFlags="deviceToDeviceTransfer" />
+    <include domain="file" path="datastore/" requireFlags="deviceToDeviceTransfer" />
+</full-backup-content>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Prednji sloj adaptivne ikone: prsten iz docs/mockups/IkonaB.html.
+  Ikona 512 × 512 iz mockupa preslikana je na vidljivih 72 dp platna od 108 dp
+  (mjerilo 72/512, središte 54): r = 21,09, debljina 8,16. Vanjski promjer
+  prstena je 50,3 dp, unutar sigurne zone od 66 dp.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M73.82,46.79 A21.09,21.09 0 1,1 61.14,34.15"
+        android:strokeWidth="8.16"
+        android:strokeColor="@color/obol_icon_ring"
+        android:strokeLineCap="round" />
+</vector>

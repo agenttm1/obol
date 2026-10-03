@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pozadina prozora prije nego Compose nacrta prvi okvir; mora odgovarati tokenu bg. -->
+    <color name="obol_bg">#FF0C1014</color>
+    <!-- Tamni prsten loga i ikone aplikacije (spec, poglavlje 3, Ikona aplikacije). -->
+    <color name="obol_icon_ring">#FF06231A</color>
+    <!-- Naglasak obavijesti; mora odgovarati tokenu accent. -->
+    <color name="obol_accent">#FF2FD39B</color>
+    <!-- Podloga ikone aplikacije (spec, poglavlje 3). -->
+    <color name="obol_icon_background">#FF2FD39B</color>
+</resources>

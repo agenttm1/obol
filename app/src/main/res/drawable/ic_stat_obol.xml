@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ikona obavijesti: prsten loga (ic_obol_ring), jednobojan kako Android traži za statusnu traku. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path
+        android:pathData="M396.95,204.70 A150,150 0 1,1 306.76,114.85"
+        android:strokeWidth="58"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round" />
+</vector>
