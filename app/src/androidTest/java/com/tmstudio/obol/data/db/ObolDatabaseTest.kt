@@ -76,7 +76,7 @@ class ObolDatabaseTest {
         assertEquals("EUR", loaded.subscription.currency)
         assertEquals(now, loaded.subscription.createdAt)
         assertEquals(id, loaded.trial!!.subscriptionId)
-        assertEquals(0, loaded.trial!!.priceCents)
+        assertEquals(0, loaded.trial.priceCents)
         assertEquals(LocalDate.of(2027, 1, 31), loaded.promo!!.endsOn)
         assertTrue(loaded.priceChanges.isEmpty())
     }

@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updatedOn": "2026-10-03",
+  "version": 3,
+  "updatedOn": "2026-10-04",
   "services": [
     {
       "id": "netflix",
@@ -105,9 +105,10 @@
       "monogram": "X",
       "colorHex": "#7FB0FF",
       "plans": [
-        { "name": "Core", "priceCents": 699 },
-        { "name": "Ultimate", "priceCents": 1799 },
-        { "name": "PC Game Pass", "priceCents": 1199 }
+        { "name": "Essential", "priceCents": 899 },
+        { "name": "Premium", "priceCents": 1299 },
+        { "name": "Ultimate", "priceCents": 2099 },
+        { "name": "PC Game Pass", "priceCents": 1299 }
       ]
     },
     {

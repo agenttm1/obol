@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ključ za potpisivanje releasea i njegove lozinke nikad ne idu u git
+keystore.properties
+*.jks
+*.keystore

@@ -70,6 +70,7 @@ Stanje: svih 11 koraka iz poglavlja 11 je napravljeno.
 ## Platforma i privatnost
 
 - **compileSdk i targetSdk 37** — trenutne AndroidX biblioteke ne rade s 36.
+  Alati: Kotlin 2.4.20, AGP 9.4.1, Gradle 9.8.0, KSP 2.3.12.
 - **Jezik sučelja je izričito hr-HR** (`AppLocale.kt`). Tekstovi su u zadanom
   `values/`, ali Android pravila množine uzima iz jezika uređaja — na engleskom
   telefonu bilo bi „3 mjeseci". Isto vrijedi za tekstove obavijesti.
@@ -88,13 +89,16 @@ Stanje: svih 11 koraka iz poglavlja 11 je napravljeno.
   traže `INTERNET` i ruše obećanje iz poglavlja 9; logotipi su zaštićeni žigovi.
 - Statistika, Uštede, Pro, izvoz podataka (spec, poglavlje 2).
 - Otkazivanje pretplate (`isActive` / `cancelledOn` postoje u bazi, UI nema).
-- Nadogradnja Kotlina (2.2 → 2.4) i AGP-a (9.1 → 9.4).
 
 ## Održavanje kataloga
 
 `app/src/main/assets/services.json`: nakon svake izmjene podigni `version` —
 aplikacija tada pri sljedećem pokretanju osvježi bazu. `CatalogFileTest` provjerava
 ispravnost datoteke (jedinstveni id-jevi, boje, cijene, servisi iz spec-a).
+
+Cijene u verziji 3 (4. 10. 2026.): ručno provjerene za Hrvatsku; Xbox Game Pass
+prema cjeniku Microsofta u eurima od 21. 4. 2026. (Essential 8,99, Premium 12,99,
+Ultimate 20,99, PC Game Pass 12,99).
 
 ## Testovi
 
@@ -107,3 +111,17 @@ ispravnost datoteke (jedinstveni id-jevi, boje, cijene, servisi iz spec-a).
 
 Manrope (`app/src/main/res/font/manrope.ttf`) — SIL Open Font License 1.1,
 tekst u `docs/licenses/Manrope-OFL.txt`.
+
+## Objava (release)
+
+Release se potpisuje ključem iz `keystore.properties` (predložak:
+`keystore.properties.example`). Ni ključ ni ta datoteka ne idu u git. Ključ se
+napravi jednom i čuva izvan repozitorija — bez njega se aplikacija na Playu ne
+može ažurirati:
+
+```
+keytool -genkeypair -v -keystore ../obol-upload.jks -alias obol-upload -keyalg RSA -keysize 4096 -validity 10000
+```
+
+Zatim `./gradlew bundleRelease` daje `app/build/outputs/bundle/release/app-release.aab`
+za Play Console (uz uključen Play App Signing ovo je ključ za upload).

@@ -72,7 +72,7 @@ class PlanFormTest {
             .copy(trialEnabled = true, trialEndsOn = LocalDate.of(2026, 10, 5), billingDate = today)
         val result = form.toNewSubscription(now, today)!!
         assertEquals(LocalDate.of(2026, 10, 5), result.trial!!.endsOn)
-        assertEquals(0, result.trial!!.priceCents)
+        assertEquals(0, result.trial.priceCents)
         assertEquals(LocalDate.of(2026, 10, 6), result.subscription.firstBillingDate)
     }
 
