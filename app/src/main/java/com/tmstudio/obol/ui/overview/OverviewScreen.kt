@@ -43,7 +43,7 @@ import com.tmstudio.obol.domain.Overview
 import com.tmstudio.obol.domain.SubscriptionSummary
 import com.tmstudio.obol.domain.UpcomingEvent
 import com.tmstudio.obol.ui.components.ListDivider
-import com.tmstudio.obol.ui.components.MonogramTile
+import com.tmstudio.obol.ui.components.ServiceMark
 import com.tmstudio.obol.ui.components.ObolLogo
 import com.tmstudio.obol.ui.components.cycleSuffixText
 import com.tmstudio.obol.ui.components.relativeDaysText
@@ -281,7 +281,7 @@ private fun UpcomingCard(
             borderColor = colors.border,
             onClick = onClick,
             modifier = modifier,
-            leading = { MonogramTile(subscription.monogram, serviceColor(subscription.colorHex)) },
+            leading = { ServiceMark(subscription.serviceId, subscription.monogram, serviceColor(subscription.colorHex)) },
             title = subscription.name,
             subtitle = stringResource(
                 R.string.overview_billing_subtitle,

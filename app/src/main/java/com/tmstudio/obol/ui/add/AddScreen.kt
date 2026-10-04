@@ -43,7 +43,7 @@ import com.tmstudio.obol.R
 import com.tmstudio.obol.data.db.entity.BillingCycle
 import com.tmstudio.obol.data.db.entity.Service
 import com.tmstudio.obol.domain.cheapestPlan
-import com.tmstudio.obol.ui.components.MonogramTile
+import com.tmstudio.obol.ui.components.ServiceMark
 import com.tmstudio.obol.ui.components.ScreenHeader
 import com.tmstudio.obol.ui.components.cycleSuffix
 import com.tmstudio.obol.ui.components.dashedBorder
@@ -226,7 +226,8 @@ private fun ServiceTile(service: Service, onClick: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(spacing.x8),
     ) {
-        MonogramTile(
+        ServiceMark(
+            serviceId = service.id,
             monogram = service.monogram,
             color = serviceColor(service.colorHex),
             size = spacing.monogramTileSmall,

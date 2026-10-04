@@ -55,7 +55,7 @@ import com.tmstudio.obol.R
 import com.tmstudio.obol.data.db.entity.BillingCycle
 import com.tmstudio.obol.data.db.entity.Category
 import com.tmstudio.obol.domain.parseMoneyInput
-import com.tmstudio.obol.ui.components.MonogramTile
+import com.tmstudio.obol.ui.components.ServiceMark
 import com.tmstudio.obol.ui.components.ObolDatePickerDialog
 import com.tmstudio.obol.ui.components.ObolSwitch
 import com.tmstudio.obol.ui.components.OptionSheet
@@ -306,7 +306,8 @@ private fun ServiceCard(form: PlanForm, content: @Composable RowScope.() -> Unit
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(spacing.x12),
     ) {
-        MonogramTile(
+        ServiceMark(
+            serviceId = form.serviceId,
             monogram = form.monogram,
             color = serviceColor(form.colorHex),
             size = spacing.monogramTileLarge,

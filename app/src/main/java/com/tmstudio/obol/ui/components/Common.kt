@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -46,9 +47,13 @@ fun ObolLogo(modifier: Modifier = Modifier) {
     }
 }
 
-/** Pločica sa slovom servisa u njegovoj boji. */
+/**
+ * Pločica servisa u njegovoj boji: logotip ako ga servis ima ([ServiceLogos]),
+ * inače monogram. Logotip je jednobojan i obojen bojom servisa, kao slovo.
+ */
 @Composable
-fun MonogramTile(
+fun ServiceMark(
+    serviceId: String?,
     monogram: String,
     color: Color,
     modifier: Modifier = Modifier,
@@ -63,9 +68,22 @@ fun MonogramTile(
             .background(ObolTheme.colors.tintedBackground(color)),
         contentAlignment = Alignment.Center,
     ) {
-        Text(text = monogram, style = style, color = color)
+        val logo = ServiceLogos.forService(serviceId)
+        if (logo != null) {
+            Icon(
+                painter = painterResource(logo),
+                contentDescription = null,
+                tint = color,
+                modifier = Modifier.size(size * LOGO_TO_TILE),
+            )
+        } else {
+            Text(text = monogram, style = style, color = color)
+        }
     }
 }
+
+/** Logotip zauzima polovicu pločice — optički jednako teško kao monogram. */
+private const val LOGO_TO_TILE = 0.5f
 
 /** Tanka crta između redova liste. */
 @Composable

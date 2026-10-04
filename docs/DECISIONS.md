@@ -18,6 +18,13 @@ Stanje: svih 11 koraka iz poglavlja 11 je napravljeno.
   poskupljenje radi bez obzira na to je li `basePriceCents` već postavljen na novu cijenu.
 - **`Subscription.serviceId` nije strani ključ** na katalog: osvježavanje kataloga
   ne smije dirati korisnikove pretplate. Ime, monogram i boja se kopiraju pri unosu.
+- **Logotipi servisa** umjesto monograma, gdje postoje (`ServiceLogos`): 11 servisa
+  dobiva jednobojni znak iz Simple Icons 16.34.0, obojen bojom servisa na istoj
+  prigušenoj podlozi kao monogram. Disney+, Xbox, Nintendo, Microsoft 365, Canva i
+  Adobe imaju monogram — ti su znakovi uklonjeni iz Simple Icons na zahtjev vlasnika,
+  pa se ne uzimaju ni iz starijih verzija. Google One koristi Googleovo „G" jer
+  nema vlastiti znak. Logotipi su ugrađeni u aplikaciju (bez interneta) i ne
+  smiju se koristiti u ikoni aplikacije ni kao glavni motiv materijala za Play.
 - **Kategorije bez boje u paleti** (`EDUCATION`, `FITNESS`, `NEWS`, `OTHER`) koriste
   boju alata `#8FB8FF`.
 
@@ -85,8 +92,9 @@ Stanje: svih 11 koraka iz poglavlja 11 je napravljeno.
 
 ## Za kasnije (izvan v1)
 
-- Cijene po državi korisnika, „live" cijene i pravi logotipi servisa. Live cijene
-  traže `INTERNET` i ruše obećanje iz poglavlja 9; logotipi su zaštićeni žigovi.
+- Cijene po državi korisnika i „live" cijene. Live cijene traže `INTERNET` i ruše
+  obećanje iz poglavlja 9.
+- Logotipi za servise koji ih zasad nemaju — samo uz dopuštenje vlasnika znaka.
 - Statistika, Uštede, Pro, izvoz podataka (spec, poglavlje 2).
 - Otkazivanje pretplate (`isActive` / `cancelledOn` postoje u bazi, UI nema).
 
@@ -111,6 +119,10 @@ Ultimate 20,99, PC Game Pass 12,99).
 
 Manrope (`app/src/main/res/font/manrope.ttf`) — SIL Open Font License 1.1,
 tekst u `docs/licenses/Manrope-OFL.txt`.
+
+Logotipi servisa (`app/src/main/res/drawable/logo_*.xml`) — Simple Icons 16.34.0,
+CC0 1.0 (https://simpleicons.org). Sami znakovi su zaštićeni žigovi svojih
+vlasnika; koriste se samo da bi korisnik prepoznao servis koji plaća.
 
 ## Objava (release)
 

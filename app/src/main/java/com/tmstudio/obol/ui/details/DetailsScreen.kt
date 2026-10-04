@@ -37,7 +37,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.tmstudio.obol.R
 import com.tmstudio.obol.ui.components.ListDivider
-import com.tmstudio.obol.ui.components.MonogramTile
+import com.tmstudio.obol.ui.components.ServiceMark
 import com.tmstudio.obol.ui.components.ScreenHeader
 import com.tmstudio.obol.ui.components.categoryLabel
 import com.tmstudio.obol.ui.components.cycleSuffixText
@@ -114,7 +114,8 @@ private fun Identity(state: DetailsUiState.Content) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(spacing.x14),
     ) {
-        MonogramTile(
+        ServiceMark(
+            serviceId = sub.serviceId,
             monogram = sub.monogram,
             color = serviceColor(sub.colorHex),
             size = spacing.monogramTileXl,
