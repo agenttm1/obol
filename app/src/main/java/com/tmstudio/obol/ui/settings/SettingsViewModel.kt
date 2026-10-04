@@ -10,6 +10,7 @@ import com.tmstudio.obol.ObolApplication
 import com.tmstudio.obol.data.prefs.AppPreferences
 import com.tmstudio.obol.domain.ReminderSettings
 import com.tmstudio.obol.notifications.ReminderScheduler
+import com.tmstudio.obol.ui.theme.ThemeMode
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
@@ -24,6 +25,13 @@ class SettingsViewModel(
     /** null dok se postavke ne učitaju. */
     val settings: StateFlow<ReminderSettings?> =
         preferences.reminderSettings.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
+
+    val themeMode: StateFlow<ThemeMode?> =
+        preferences.themeMode.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
+
+    fun setThemeMode(mode: ThemeMode) {
+        viewModelScope.launch { preferences.setThemeMode(mode) }
+    }
 
     fun setBillingDaysBefore(days: Int) = update { it.copy(billingDaysBefore = days) }
 

@@ -244,7 +244,9 @@
     <string name="settings_currency">Valuta</string>
     <string name="settings_currency_value">EUR (€)</string>
     <string name="settings_theme">Tema</string>
-    <string name="settings_theme_value">Mračna</string>
+    <string name="settings_theme_dark">Mračna</string>
+    <string name="settings_theme_light">Svijetla</string>
+    <string name="settings_theme_system">Prema sustavu</string>
     <string name="settings_footer">TM Studio · verzija %1$s</string>
     <string name="settings_privacy">Svi podaci ostaju samo na ovom uređaju.</string>
 </resources>

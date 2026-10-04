@@ -56,10 +56,22 @@ Stanje: svih 11 koraka iz poglavlja 11 je napravljeno.
 - **Postavke:** bez Pro kartice i bez izvoza u CSV — poglavlje 2 izvoz izričito
   stavlja izvan v1, iako ga tablica u poglavlju 6 spominje. Dodan je redak
   „Vrijeme podsjetnika" (spec traži da se može mijenjati) i upozorenje kad su
-  obavijesti isključene. Valuta i tema su prikazane, ali fiksne.
+  obavijesti isključene. Valuta je prikazana, ali fiksna (EUR).
 - Boje iz mockupa koje nisu u tablici tokena (npr. `#263040`, `#C8D1DB`) nisu
   uvedene; korišten je najbliži token. Podloge monograma su aproksimacija
   prozirnošću (`ObolColors.tintedBackground`).
+
+## Teme
+
+- **Svijetla tema** je dodana nakon v1 (spec, poglavlje 2 ju je isključio), uz
+  odabir u Postavkama: Mračna (zadana, brend), Svijetla, Prema sustavu.
+- Svi parovi teksta i podloge u svijetloj temi imaju kontrast barem 4,5:1 (WCAG AA);
+  mint, koral i amber su zato tamniji (`#077A53`, `#B53A25`, `#8F5F00`). Značenja
+  boja su ista kao u tamnoj temi.
+- Boje servisa iz kataloga napravljene su za tamnu podlogu; u svijetloj se
+  zatamnjuju za 35 % (`ObolColors.serviceInk`), da i žuta i mint imaju barem 3:1.
+- Logo (mint pločica s prstenom) je u obje teme isti.
+- Prije nego se postavka pročita ne crta se ništa, da svijetla tema ne bljesne tamnom.
 
 ## Podsjetnici
 

@@ -37,7 +37,7 @@ fun ObolLogo(modifier: Modifier = Modifier) {
         modifier
             .size(ObolTheme.spacing.logoSize)
             .clip(ObolTheme.shapes.logo)
-            .background(ObolTheme.colors.accent)
+            .background(ObolTheme.colors.brand)
     ) {
         Image(
             painter = painterResource(R.drawable.ic_obol_ring),
@@ -96,12 +96,15 @@ fun ListDivider(modifier: Modifier = Modifier) {
     )
 }
 
-/** Boja servisa iz `colorHex`; neispravna vrijednost pada na sekundarnu boju teksta. */
+/**
+ * Boja servisa iz `colorHex`, prilagođena temi (u svijetloj zatamnjena radi kontrasta).
+ * Neispravna vrijednost pada na sekundarnu boju teksta.
+ */
 @Composable
 fun serviceColor(colorHex: String): Color {
-    val fallback = ObolTheme.colors.textSecondary
-    return remember(colorHex, fallback) {
-        runCatching { Color(colorHex.toColorInt()) }.getOrDefault(fallback)
+    val colors = ObolTheme.colors
+    return remember(colorHex, colors) {
+        runCatching { colors.serviceInk(Color(colorHex.toColorInt())) }.getOrDefault(colors.textSecondary)
     }
 }
 

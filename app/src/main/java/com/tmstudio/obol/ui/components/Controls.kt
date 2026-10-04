@@ -102,12 +102,12 @@ fun ObolSwitch(checked: Boolean, onCheckedChange: ((Boolean) -> Unit)?, modifier
         onCheckedChange = onCheckedChange,
         modifier = modifier,
         colors = SwitchDefaults.colors(
-            checkedThumbColor = colors.textPrimary,
+            checkedThumbColor = colors.switchThumb,
             checkedTrackColor = colors.accent,
             checkedBorderColor = colors.accent,
-            uncheckedThumbColor = colors.textPrimary,
+            uncheckedThumbColor = colors.switchThumbOff,
             uncheckedTrackColor = colors.surfaceAlt,
-            uncheckedBorderColor = colors.surfaceAlt,
+            uncheckedBorderColor = colors.switchTrackOffBorder,
         ),
     )
 }

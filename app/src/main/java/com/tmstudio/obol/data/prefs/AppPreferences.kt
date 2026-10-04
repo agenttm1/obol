@@ -7,9 +7,11 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.tmstudio.obol.data.catalog.CatalogVersionStore
 import com.tmstudio.obol.domain.ReminderSettings
+import com.tmstudio.obol.ui.theme.ThemeMode
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -50,6 +52,15 @@ class AppPreferences(private val dataStore: DataStore<Preferences>) : CatalogVer
         }
     }
 
+    /** Odabrana tema; nepoznata ili nepostavljena vrijednost znači tamnu. */
+    val themeMode: Flow<ThemeMode> = dataStore.data.map { prefs ->
+        prefs[Keys.themeMode]?.let { name -> ThemeMode.entries.firstOrNull { it.name == name } } ?: ThemeMode.DARK
+    }
+
+    suspend fun setThemeMode(mode: ThemeMode) {
+        dataStore.edit { it[Keys.themeMode] = mode.name }
+    }
+
     /** Dan kad je dnevni worker zadnji put poslao podsjetnike — da se isti dan ne šalju dvaput. */
     suspend fun lastReminderRun(): LocalDate? =
         dataStore.data.first()[Keys.lastReminderRun]?.let(LocalDate::ofEpochDay)
@@ -67,6 +78,7 @@ class AppPreferences(private val dataStore: DataStore<Preferences>) : CatalogVer
         val usageChecksEnabled = booleanPreferencesKey("usage_checks_enabled")
         val priceIncreaseAlerts = booleanPreferencesKey("price_increase_alerts")
         val lastReminderRun = longPreferencesKey("last_reminder_run")
+        val themeMode = stringPreferencesKey("theme_mode")
     }
 
     private companion object {

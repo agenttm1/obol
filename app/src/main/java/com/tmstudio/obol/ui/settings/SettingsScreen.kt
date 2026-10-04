@@ -50,6 +50,7 @@ import com.tmstudio.obol.ui.components.OptionSheet
 import com.tmstudio.obol.ui.components.SheetOption
 import com.tmstudio.obol.ui.format.ObolFormat
 import com.tmstudio.obol.ui.theme.ObolTheme
+import com.tmstudio.obol.ui.theme.ThemeMode
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
@@ -68,8 +69,10 @@ fun SettingsScreen(viewModel: SettingsViewModel = viewModel(factory = SettingsVi
         onPauseOrDispose { }
     }
 
+    val themeMode by viewModel.themeMode.collectAsStateWithLifecycle()
     var showDaysSheet by rememberSaveable { mutableStateOf(false) }
     var showTimePicker by rememberSaveable { mutableStateOf(false) }
+    var showThemeSheet by rememberSaveable { mutableStateOf(false) }
 
     Column(
         Modifier
@@ -121,10 +124,14 @@ fun SettingsScreen(viewModel: SettingsViewModel = viewModel(factory = SettingsVi
         }
 
         Group(stringResource(R.string.settings_group_general), Modifier.padding(top = spacing.x20)) {
-            // U v1 su valuta i tema fiksne (spec: valuta zasad uvijek EUR, samo tamna tema).
+            // Valuta je zasad uvijek EUR (spec, poglavlje 4).
             ValueRow(stringResource(R.string.settings_currency), stringResource(R.string.settings_currency_value), onClick = null)
             ListDivider()
-            ValueRow(stringResource(R.string.settings_theme), stringResource(R.string.settings_theme_value), onClick = null)
+            ValueRow(
+                label = stringResource(R.string.settings_theme),
+                value = themeLabel(themeMode ?: ThemeMode.DARK),
+                onClick = { showThemeSheet = true },
+            )
         }
 
         Text(
@@ -143,6 +150,15 @@ fun SettingsScreen(viewModel: SettingsViewModel = viewModel(factory = SettingsVi
         )
     }
 
+    if (showThemeSheet) {
+        OptionSheet(
+            title = stringResource(R.string.settings_theme),
+            options = ThemeMode.entries.map { SheetOption(it, themeLabel(it)) },
+            selected = themeMode,
+            onSelect = { viewModel.setThemeMode(it); showThemeSheet = false },
+            onDismiss = { showThemeSheet = false },
+        )
+    }
     if (showDaysSheet) {
         OptionSheet(
             title = stringResource(R.string.settings_billing_days),
@@ -162,6 +178,15 @@ fun SettingsScreen(viewModel: SettingsViewModel = viewModel(factory = SettingsVi
 }
 
 private val TIME_FORMAT: DateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm")
+
+@Composable
+private fun themeLabel(mode: ThemeMode): String = stringResource(
+    when (mode) {
+        ThemeMode.DARK -> R.string.settings_theme_dark
+        ThemeMode.LIGHT -> R.string.settings_theme_light
+        ThemeMode.SYSTEM -> R.string.settings_theme_system
+    }
+)
 
 @Composable
 private fun billingDaysLabel(days: Int): String =
